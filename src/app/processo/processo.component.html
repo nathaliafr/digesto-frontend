@@ -6,8 +6,11 @@
         <div class="form-group col-6">
           <label for="documento">CNJ do processo</label>
           <input type="text" class="form-control" id="documento" [(ngModel)]="numeroProcesso"
-            placeholder="CNJ do processo" maxlength="14">
-          <button class="btn btn-primary" (click)="buscarProceso()">Buscar</button>
+            placeholder="CNJ do processo" >
+          <button class="btn btn-primary" (click)="validarCNJ()">Buscar</button>
+          <div *ngIf="mensagemErro" class="alert alert alert-danger alert-dismissible fade show" role="alert">
+            {{mensagemErro}}
+          </div>
         </div>
 
       </div>
