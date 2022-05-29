@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "coverage-badge": "lcov-badge-generator -o badge.svg coverage/lcov.info",
+    "test": "ng test --code-coverage --browsers=Chrome"
   },
   "private": true,
   "dependencies": {

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/internal/Observable';
 @Injectable({
   providedIn: 'root'
 })
-export class ProcessoServece {
+export class ProcessoService {
 
   url = 'https://op.digesto.com.br/api/tribproc/';
 
