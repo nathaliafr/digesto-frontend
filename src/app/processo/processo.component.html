@@ -1,13 +1,14 @@
 <div class=" jumbotron">
-  <div>
+  <img src="https://s3.amazonaws.com//beta-img.b2bstack.net/uploads/production/product/product_image/16831/digesto.jpg">
+  <div> 
 
     <fieldset class="form-group">
       <div class="row">
         <div class="form-group col-6">
           <label for="documento">CNJ do processo</label>
-          <input type="text" class="form-control" id="documento" [(ngModel)]="numeroProcesso"
+          <input type="text" class="form-control field" id="documento" [(ngModel)]="numeroProcesso"
             placeholder="CNJ do processo" >
-          <button class="btn btn-primary" (click)="validarCNJ()">Buscar</button>
+          <button class="btn btn-primary field" (click)="validarCNJ()">Buscar</button>
           <div *ngIf="mensagemErro" class="alert alert alert-danger alert-dismissible fade show" role="alert">
             {{mensagemErro}}
           </div>
@@ -19,204 +20,7 @@
     <div *ngIf="processo">
 
       <fieldset class="form-group">
-        <legend>Processo</legend>
-
-        <div class="row">
-          <div class="form-group col-6">
-            <label for="regional_cnj">regional_cnj</label>
-            <input type="text" disabled="true" class="form-control" id="regional_cnj"
-              [(ngModel)]="processo.regional_cnj" placeholder="regional_cnj">
-
-            <label for="numeroAlternativo">Numero Alternativo</label>
-            <input type="text" disabled="true" class="form-control" id="numeroAlternativo"
-              [(ngModel)]="processo.numeroAlternativo" placeholder="numero Alternativo">
-
-            <label for="vara">vara</label>
-            <input type="text" disabled="true" class="form-control" id="vara" [(ngModel)]="processo.vara"
-              placeholder="vara">
-
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="form-group col-6">
-
-            <label for="classeNatureza">classeNatureza</label>
-            <input type="text" disabled="true" class="form-control" id="classeNatureza"
-              [(ngModel)]="processo.classeNatureza" placeholder="classeNatureza">
-            <label for="distribuicaoTipo">distribuicaoTipo</label>
-            <input type="text" disabled="true" class="form-control" id="distribuicaoTipo"
-              [(ngModel)]="processo.distribuicaoTipo" placeholder="distribuicaoTipo">
-            <label for="situacao">situacao</label>
-            <input type="text" disabled="true" class="form-control" id="situacao" [(ngModel)]="processo.situacao"
-              placeholder="situacao">
-            <label for="juiz">juiz</label>
-            <input type="text" disabled="true" class="form-control" id="juiz" [(ngModel)]="processo.juiz"
-              placeholder="juiz">
-
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="form-group col-6">
-            <label for="area">area</label>
-            <input type="text" disabled="true" class="form-control" id="area" [(ngModel)]="processo.area"
-              placeholder="area">
-            <label for="juiz">assuntoExtra</label>
-            <input type="text" disabled="true" class="form-control" id="assuntoExtra"
-              [(ngModel)]="processo.assuntoExtra" placeholder="assuntoExtra">
-            <label for="liminar">liminar</label>
-            <input type="text" disabled="true" class="form-control" id="liminar" [(ngModel)]="processo.liminar"
-              placeholder="liminar">
-
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="form-group col-6">
-            <label for="vara_original">vara_original</label>
-            <input type="text" disabled="true" class="form-control" id="vara_original"
-              [(ngModel)]="processo.vara_original" placeholder="vara_original">
-            <label for="extinto">extinto</label>
-            <input type="text" disabled="true" class="form-control" id="extinto" [(ngModel)]="processo.extinto"
-              placeholder="extinto">
-            <label for="gratuita">gratuita</label>
-            <input type="text" disabled="true" class="form-control" id="gratuita" [(ngModel)]="processo.gratuita"
-              placeholder="gratuita">
-
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="form-group col-6">
-            <label for="valor">valor</label>
-            <input type="text" disabled="true" class="form-control" id="valor" [(ngModel)]="processo.valor"
-              placeholder="valor">
-            <label for="alteradoEm">alteradoEm</label>
-            <input type="text" disabled="true" class="form-control" id="alteradoEm" [(ngModel)]="processo.alteradoEm"
-              placeholder="alteradoEm">
-            <label for="fonte_sistema">fonte_sistema</label>
-            <input type="text" disabled="true" class="form-control" id="fonte_sistema"
-              [(ngModel)]="processo.fonte_sistema" placeholder="fonte_sistema">
-
-
-          </div>
-
-        </div>
-
-        <div class="row">
-          <div class="form-group col-6">
-            <label for="foro">foro</label>
-            <input type="text" disabled="true" class="form-control" id="foro" [(ngModel)]="processo.foro"
-              placeholder="foro">
-            <label for="situacao_situacaoID">situacao_situacaoID</label>
-            <input type="text" disabled="true" class="form-control" id="situacao_situacaoID"
-              [(ngModel)]="processo.situacao_situacaoID" placeholder="situacao_situacaoID">
-            <label for="sentencaData">sentencaData</label>
-            <input type="text" disabled="true" class="form-control" id="sentencaData"
-              [(ngModel)]="processo.sentencaData" placeholder="sentencaData">
-
-          </div>
-
-        </div>
-
-        <div class="row">
-          <div class="form-group col-6">
-            <label for="instancia">instancia</label>
-            <input type="text" disabled="true" class="form-control" id="instancia" [(ngModel)]="processo.instancia"
-              placeholder="instancia">
-            <label for="numero">numero</label>
-            <input type="text" disabled="true" class="form-control" id="numero" [(ngModel)]="processo.numero"
-              placeholder="numero">
-            <label for="flag">flag</label>
-            <input type="text" disabled="true" class="form-control" id="flag" [(ngModel)]="processo.flag"
-              placeholder="flag">
-
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="form-group col-6">
-            <label for="comarca_cnj">comarca_cnj</label>
-            <input type="text" disabled="true" class="form-control" id="comarca_cnj" [(ngModel)]="processo.comarca_cnj"
-              placeholder="comarca_cnj">
-            <label for="comarca">comarca</label>
-            <input type="text" disabled="true" class="form-control" id="comarca" [(ngModel)]="processo.comarca"
-              placeholder="comarca">
-            <label for="tribunalID">tribunalID</label>
-            <input type="text" disabled="true" class="form-control" id="tribunalID" [(ngModel)]="processo.tribunalID"
-              placeholder="tribunalID">
-
-
-          </div>
-
-        </div>
-
-        <div class="row">
-          <div class="form-group col-6">
-            <label for="classes">classes</label>
-            <select class="form-control" id="classes">
-
-              <option *ngFor="let classe of processo.classes">{{classe}}</option>
-
-
-            </select>
-
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="form-group col-6">
-            <label for="classeNatureza_dg">classeNatureza_dg</label>
-            <input type="text" disabled="true" class="form-control" id="classeNatureza_dg"
-              [(ngModel)]="processo.classeNatureza_dg" placeholder="classeNatureza_dg">
-            <label for="foro_cnj">foro_cnj</label>
-            <input type="text" disabled="true" class="form-control" id="foro_cnj" [(ngModel)]="processo.foro_cnj"
-              placeholder="foro_cnj">
-            <label for="tribunal">tribunal</label>
-            <input type="text" disabled="true" class="form-control" id="tribunal" [(ngModel)]="processo.tribunal"
-              placeholder="tribunal">
-
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="form-group col-6">
-            <label for="processoID">processoID</label>
-            <input type="text" disabled="true" class="form-control" id="processoID" [(ngModel)]="processo.processoID"
-              placeholder="processoID">
-            <label for="distribuicaoData">distribuicaoData</label>
-            <input type="text" disabled="true" class="form-control" id="distribuicaoData"
-              [(ngModel)]="processo.distribuicaoData" placeholder="distribuicaoData">
-            <label for="segredo_justica">segredo_justica</label>
-            <input type="text" disabled="true" class="form-control" id="tribunal" [(ngModel)]="processo.segredo_justica"
-              placeholder="segredo_justica">
-
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="form-group col-6">
-            <label for="arquivado">arquivado</label>
-            <input type="text" disabled="true" class="form-control" id="arquivado" [(ngModel)]="processo.arquivado"
-              placeholder="arquivado">
-            <label for="uf">uf</label>
-            <input type="text" disabled="true" class="form-control" id="uf" [(ngModel)]="processo.uf" placeholder="uf">
-
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="form-group col-6">
-            <label for="criadoEm">criadoEm</label>
-            <input type="text" disabled="true" disabled="true" class="form-control" id="criadoEm"
-              [(ngModel)]="processo.criadoEm" placeholder="criadoEm">
-
-          </div>
-
-        </div>
-
-
+        <legend>Processo Nº {{processo.numero}} - Instância {{processo.instancia}}</legend>
       </fieldset>
       <fieldset class="form-group">
         <legend>Anexos</legend>
@@ -226,9 +30,8 @@
               <tr class="text-dark">
 
                 <th scope="col">Numero</th>
-                <th scope="col">Visualizar</th>
-                <th scope="col">id</th>
-                <th scope="col">data</th>
+                <th scope="col">Data</th>
+                <th scope="col">Download</th>
 
               </tr>
             </thead>
@@ -236,9 +39,8 @@
               <tr *ngFor="let anexo of processo.anexos">
 
                 <td> {{anexo[0]}}</td>
+                <td> {{anexo[3] | date : 'dd/MM/yyyy' }}</td>
                 <td> <a class="btn btn-sm btn-primary" href="{{anexo[1]}}">Abrir </a> </td>
-                <td> {{anexo[2]}}</td>
-                <td> {{anexo[3]}}</td>
               </tr>
 
             </tbody>
@@ -255,10 +57,9 @@
             <thead>
               <tr class="text-dark">
 
-                <th scope="col">Numero</th>
+                <th scope="col">Data/Hora</th>
+                <th scope="col">Detalhe</th>
                 <th scope="col">Visualizar</th>
-                <th scope="col">id</th>
-                <th scope="col">data</th>
 
               </tr>
             </thead>
@@ -266,9 +67,8 @@
               <tr *ngFor="let audiencia of processo.audiencias">
 
                 <td> {{audiencia[0]}}</td>
-                <td> <a class="btn btn-sm btn-primary" href="{{audiencia[1]}}">Abrir </a> </td>
                 <td> {{audiencia[2]}}</td>
-                <td> {{audiencia[3]}}</td>
+                <td> <a class="btn btn-sm btn-primary" href="{{audiencia[1]}}">Abrir </a> </td>
               </tr>
 
             </tbody>
@@ -278,15 +78,15 @@
 
       </fieldset>
       <fieldset class="form-group">
-        <legend>Movs</legend>
+        <legend>Movimentação</legend>
         <div class="table-responsive">
           <table class="table text-start align-middle table-bordered table-hover mb-0" *ngIf="processo.movs">
             <thead>
               <tr class="text-dark">
 
-                <th scope="col">data</th>
+                <th scope="col">Data</th>
                 <th scope="col">Tipo</th>
-                <th scope="col">descrição</th>
+                <th scope="col">Texto</th>
                
 
               </tr>
@@ -302,36 +102,7 @@
             </tbody>
           </table>
         </div>
-
-
       </fieldset>
-      <fieldset class="form-group">
-        <legend>Acessos</legend>
-        <div class="table-responsive">
-          <table class="table text-start align-middle table-bordered table-hover mb-0" *ngIf="processo.acessos">
-            <thead>
-              <tr class="text-dark">
-
-                <th scope="col">data</th>
-             
-               
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let acesso of processo.acessos">
-
-                <td> {{acesso}}</td>
-               
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-
-
-      </fieldset>
-
       <fieldset class="form-group">
         <legend>Partes</legend>
         <div class="table-responsive">
@@ -339,48 +110,19 @@
             <thead>
               <tr class="text-dark">
 
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-             
-               
-
+                <th scope="col">Nome</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Advogado - OAB</th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let partes of processo.partes">
 
-                <td> {{partes[0]}}</td>
-                <td> {{partes[1]}}</td>
                 <td> {{partes[2]}}</td>
-                <td> {{partes[3]}}</td>
-                <td> {{partes[4]}}</td>
-                <td> {{partes[5]}}</td>
-                <td> {{partes[6]}}</td>
-                <td> {{partes[7]}}</td>
                 <td> {{partes[8]}}</td>
-                <td> {{partes[9]}}</td>
-                <td> {{partes[10]}}</td>
-                <td> {{partes[11]}}</td>
-                <td> {{partes[12]}}</td>
-                <td> {{partes[13]}}</td>
-                <td> {{partes[14]}}</td>
-                <td> {{partes[15]}}</td>
-                <td> {{partes[16]}}</td>
+                <div *ngFor="let partes1 of partes[9]">
+                  <td> {{partes1[1]}} - {{partes1[2]}}</td>
+                </div>
                 
               </tr>
 

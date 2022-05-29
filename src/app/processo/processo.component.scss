@@ -1,31 +1,16 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 
-.ama-login {
-  height: 100%;
-  padding: 16px 24px 0;
-  background-color: #F1F3F5;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
+.field {
+  margin-bottom: 10px;
 }
 
-.obrigatorio {
-  color: #8b0000;
+.jumbotron {
+  background-color: white;
+  display: grid;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.form-field {
-  text-align: center;
-
-  input {
-    border-radius: 6px;
-  }
-
-  .jumbotron {
-    margin: 0;
-    height: 100%;
-  }
+img {
+  place-self: center;
 }
