@@ -1,27 +1,29 @@
 # DigestoFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
+
+## Instalação
+
+Primeiro passo instalar o [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm) em sua máquina com o comando `nvm install 16`;
+Segundo passo rodar o comando `npm i -g @angular/cli@13.0.2` para instalar a versão correta do angular cli;
+Terceiro passo rode o comando `npm install`;
+E por último rode a aplicação.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Rode o comando `ng serve` para dev server. Navegue por `http://localhost:4200/`. A aplicação irá atualizar automaticamente se fizer alguma alteração.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Rode o comando `ng build` para buildar o projeto. Os atefatos do bild serão armazenados no diretório `dist/`.
 
-## Running unit tests
+## Rodar tests unitários
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Rode o comando `ng test` para executar os testes via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Observação
 
-## Further help
+Desenvolvido na branch develop e feito merge na branch main.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Durante o desenvolvimento foi constatado um erro de cors ao tentar acessar as urls passadas, por este motivo foi desenvolvido com mocks e sem mocks porém as partes que acessariam a api está comentada.
